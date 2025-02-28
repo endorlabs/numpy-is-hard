@@ -40,14 +40,14 @@
    pip install tensorflow==2.9.0
    ```
    - **Expect issues** with other dependencies.
-   - **Run OSV Scanner again** to check for remaining vulnerabilities.
+   - **Run OSV Scanner again** to check for remaining vulnerabilities. 
 
 4. **Upgrade TensorFlow to 2.14.0**:
    ```sh
    pip install tensorflow==2.14.0
    ```
    - **Watch more things break.**
-   - **Run OSV Scanner again** after upgrading.
+   - **Run OSV Scanner again** after upgrading. IF YOU EVEN CAN!
 
 5. **Solve conflicts manually**:
    - **Check error messages**—they often tell you which packages have conflicts.
