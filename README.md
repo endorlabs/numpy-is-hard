@@ -56,7 +56,7 @@
    - **Look for alternative versions**—sometimes upgrading a package incrementally helps resolve issues.
    - **Check the dependency chain**—a package may depend on an outdated version of another, causing conflicts.
    - **Test frequently**—after each change, verify that your application still works.
-   - Try to use ChatGPT (that counts as manual nowadays)?
+   - Try to use ChatGPT (that counts as manual nowadays)
 
 6. **The person who reduces vulnerabilities the most in 15 minutes wins.**
 
