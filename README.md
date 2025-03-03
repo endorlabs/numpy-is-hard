@@ -7,6 +7,8 @@
 - TensorFlow, NumPy, and other libraries all have **strict version requirements**.
 - **Your goal:** Reduce conflicts and improve security **without breaking the project.**
 
+**Note**: There is no real code in this repository. In the real world you would have to ALSO deal with potential breaking changes in the code and not just version constraints. 
+
 ## What You Have
 
 - A `requirements.txt` file full of conflicting dependencies.
