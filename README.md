@@ -33,27 +33,23 @@
 
 2. **Run the OSV Scanner** to check for vulnerabilities:
    ```sh
-   pip freeze > requirements.txt  # Ensure dependencies are locked
    ./osv-scanner scan --lockfile requirements.txt
    ```
 
-3. **Upgrade TensorFlow to 2.9.0**:
+3. **Upgrade TensorFlow to 2.14.0 in the requirements.txt file**:
    ```sh
-   pip install tensorflow==2.9.0
+   tensorflow==2.14.0
    ```
-   - **Expect issues** with other dependencies.
-   - **Run OSV Scanner again** to check for remaining vulnerabilities. 
 
-4. **Upgrade TensorFlow to 2.14.0**:
+   Then run the following commands to install your dependencies:
+
    ```sh
-   pip install tensorflow==2.14.0
+   pip install --force-reinstall -r requirements.txt
    ```
-   - **Watch more things break.**
-   - **Run OSV Scanner again** after upgrading. IF YOU EVEN CAN!
 
-5. **Solve conflicts manually**:
+4. **Solve conflicts manually**:
    - **Check error messages**—they often tell you which packages have conflicts.
-   - **Modify `requirements.txt`**—try adjusting package versions to find a working set.
+   - **Modify `requirements.txt`** —try adjusting package versions to find a working set.
    - **Use `pip install --upgrade <package>` carefully**—some dependencies need manual intervention to align with the correct versions.
    - **Look for alternative versions**—sometimes upgrading a package incrementally helps resolve issues.
    - **Check the dependency chain**—a package may depend on an outdated version of another, causing conflicts.
@@ -61,6 +57,14 @@
    - Try to use ChatGPT (that counts as manual nowadays)
 
 6. **The person who reduces vulnerabilities the most in 15 minutes wins.**
+
+
+Make sure to check your work by running:
+
+```sh
+pip freeze > requirements.txt
+./osv-scanner scan --lockfile requirements.txt
+```
 
 ## What This Teaches You
 
